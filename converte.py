@@ -1,6 +1,4 @@
-'''
-Este é um pequeno projeto que trabalha com a conversão de bases numéricas.
-'''
+from __future__ import annotations 
 from typing import Union
 
 class Conversor(object):
@@ -13,14 +11,14 @@ class Conversor(object):
     """
     SIMBOLOS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'  # Suporta até base 62
     
-    def __init__(self,numero: Union[float,int,str], base_origem=10):
+    def __init__(self,numero: Union[Conversor,float,int, str], base_origem=10):
         """
         Inicializa o conversor com um número e sua base.
 
         Args:
-            numero: O número a ser convertido. Pode ser um inteiro (assumido ser base 10)
+            numero: O número a ser convertido. Pode ser um inteiro (assumido ser base 10), um float,
                     ou uma string. Strings com prefixos '0b', '0o', '0x' terão
-                    sua base detectada automaticamente, ignorando `base_origem`.
+                    sua base detectada automaticamente, ignorando `base_origem`, também pode ser um objeto Conversor .
             base_origem: A base do número de entrada, se não houver prefixo.
             mostrar_processo: Se True, imprime os passos da conversão de decimal para outras bases.
         """

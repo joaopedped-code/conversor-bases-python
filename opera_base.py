@@ -3,12 +3,12 @@ from Converso.converte import Conversor
 from typing import Union, Callable
 import operator
 class OperaBase(Conversor):
-    def __init__(self, numero: Union[float,int, str], base_origem=10, other_base=2):
+    def __init__(self, numero: Union[Conversor,float,int, str], base_origem=10, other_base=2):
         '''
         Construtor da classe OperaBase.
 
         Args:
-            numero (Union[int, str]): O número a ser convertido.
+            numero (Union[Conversor,float,int, str]): O número a ser convertido.
             base_origem (int): A base do número de entrada.
             other_base (int): A base do número que será operador com o OperaBase.
         '''
